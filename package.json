@@ -1,0 +1,24 @@
+{
+  "name": "habitbuilder",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start":"node server.js",
+    "build": "cd habit-builder-animall && npm run build",
+    "install-client": "cd habit-builder-animall && npm install",
+    "server":"nodemon server.js",
+    "client":"cd habit-builder-animall && npm start",
+    "dev":"concurrently \"npm run server\" \"npm run client\"",
+    "heroku-postbuild":"cd habit-builder npm install && npm run build"
+  },
+  "author": "Anurag",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.10.9"
+  }
+}
